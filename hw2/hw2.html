@@ -1,0 +1,85 @@
+<!Doctype html>
+
+<html>
+	<head>
+			<meta charset="UTF-8">
+			<title>High Dynamic Range Photography</title>
+			<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+		<div class="header-wrapper">
+		<nav class="topnav">
+				<ul>
+					<li><a href="http://www.cambridgeincolour.com/">Home</a></li>
+					<li><a href="http://www.cambridgeincolour.com/photography-tools.htm">Tools</a></li>
+					<li><a href="http://www.cambridgeincolour.com/tutorials.htm">Tutorials</a></li>
+					<li><a href="http://www.cambridgeincolour.com/forums/">Forums</a></li>
+				</ul>
+			</nav>
+		<header>
+			<div id="logo"><h1>Cambridge in Colour<h1></div>
+			<h3> A Learning community for photographers</h3>
+		</header>
+		</div>
+		<aside class="sidenav">
+			<p>Browse Catagories</p>
+			<ul>
+					<li><a href="http://www.cambridgeincolour.com/learn-photography-concepts.htm">Concepts &#38; Terminology</a></li>
+					<li><a href="http://www.cambridgeincolour.com/camera-equipment.htm">Using Camera Equipment</a></li>
+					<li><a href="http://www.cambridgeincolour.com/photo-editing-tutorials.htm">Editing &#38; Post-Processing</a></li>
+					<li><a href="http://www.cambridgeincolour.com/color-management-printing.htm">Colour Managemenr &#38; Printing</a></li>
+					<li><a href="http://www.cambridgeincolour.com/photography-techniques.htm">Photo Techniques &#38; Styles</a></li>
+			</ul>
+		</aside>
+		<article>
+			<section class="main-content">
+				<h2>HIGH DYNAMIC RANGE PHOTOGRAPHY</h2>
+				<p>High dynamic range (HDR) images enable photographers to record a greater range of tonal detail than a camera could capture in a single photo. This opens up a whole new set of lighting possibilities which one might have previously avoided — for purely technical reasons. The new "merge to HDR" feature of Photoshop accomplishes this by combining a series of bracketed exposures into a single image, which encompasses the tonal detail of the entire series.
+				</p>
+				<center><img src="img1.png"></center>
+				<p>There is no free lunch however; trying to broaden the tonal range will inevitably come at the expense of decreased contrast in some tones. Learning to use HDR software can help you make the most of your dynamic range under tricky lighting — while still balancing this trade-off with contrast.
+				</p>
+			</section>
+			<section class="main-content">
+				<h2>MOTIVATION: THE DYNAMIC RANGE DILEMMA</h2>
+				<p>As digital sensors attain progressively higher resolutions, and thereby successively smaller pixel sizes, the one quality of an image which does not benefit is its dynamic range. This is particularly apparent in modern compact cameras with 8 or more megapixels, as these are more susceptible than ever to blown highlights or noisy shadow detail. Furthermore, some scenes simply contain a greater brightness range than can be captured by current digital cameras — of any type.
+				</p>
+			</section>
+			<section class="main-content">
+				<h2>WHEN TO USE HDR IMAGES</h2>
+				<p>Only use HDR when the scene's brightness distribution cannot be easily blended using a graduated neutral density (GND) filter. This is because GND filters extend dynamic range while still maintaining local contrast. Scenes which are ideally suited for GND filters are those with simple lighting geometries, such as the linear blend from darker land to a brighter sky in landscape photography:
+				</p>
+				<center><img src="img2.png"></center>
+				<p>In contrast, a scene whose brightness distribution is no longer easily blended using a GND filter is the doorway scene shown below.
+				</p>
+				<center><img src="img3.png"></center>
+				<p>Note that the above scene contains roughly three tonal regions with abrupt transitions at their edges — therefore requiring a custom-made GND filter. If we were to look at this in person, we would be able to discern detail both inside and outside the doorway, because our eyes would adjust to changing brightness. This tutorial focuses on using HDR to better approximate what we would see with our own eyes.
+				</p>
+			</section>
+			<section class="main-content">
+				<h2>INNER WORKINGS OF AN HDR FILE</h2>
+				<p>Photoshop creates an HDR file by using the EXIF information from each of your bracketed images to determine their shutter speed, aperture and ISO settings. This tells Photoshop how much light actually came from each image region. Since this light may vary greatly in its intensity, Photoshop creates the HDR file using 32-bits to describe each color channel (as opposed to the usual 16 or 8-bits; see "Understanding Bit Depth").
+				</p>
+				<p>
+				HDR files use these extra bits to create a relatively open-ended brightness scale, which can adjust to fit the needs of your image. However, the key benefit is that these extra bits are also used more efficiently than typical 8 or 16-bit images (which we'll refer to as "low dynamic range" or LDR images from here on out).
+				</p>
+				<p>The 32-bit HDR file format is able to record a greater dynamic range because it uses its bits to specify floating point numbers, also referred to as exponential notation. A floating point number is composed of a decimal number between 1 and 10 multiplied by some power of 10, such as 5.467x103, as opposed to the usual integers of 0-255 (for 8-bit) or 0-65535 (for 16-bit). This way, an image file can specify a brightness of 4,300,000,000 simply as 4.3x109, which would be too large even with 32-bit integers.
+				</p>
+				<p>OK, the floating point notation certainly looks more concise, but how does this help a computer? Why not just keep adding more bits to specify successively larger numbers, and therefore a larger dynamic range? It's a problem of diminishing returns. As more bits are added to ordinary LDR files, an exponentially greater fraction are just used to specify color more precisely — not to extend dynamic range. This results in far more bits being used to describe the darker tones than the lighter ones:
+				</p>
+			</section>
+			<section class="main-content">
+				<h2>RECOMMENDATIONS</h2>
+				<p>Keep in mind that HDR images are very new — particularly in the field of digital photography. Existing tools are therefore likely to improve significantly; there is not currently an automated process which converts all HDR images into those which look pleasing on screen, or in a print. Good HDR conversions therefore require significant work and experimentation in order to achieve realistic and pleasing final final images.
+				</p>
+				<p>Additionally, incorrectly converted or difficult HDR images may appear washed out after conversion. While re-investigating the conversion settings is recommended as the first corrective step, touch-up with local contrast enhancement may improve results.
+				</p>
+				<p>As with all new tools, be careful not to overdo their use. Use care when violating the image's original tonal hierarchy; do not expect deep shadows to become nearly as light as a bright sky. In our doorway example, the sunlit building and sky are the brightest objects, and they stayed that way in our final image. Overdoing the HDR effect can easily cause the image to lose its sense of realism. Furthermore, HDR should only be used when necessary; best results can always be achieved by having good lighting to begin with.
+				</p>
+			</section>
+		</article>
+		<footer>
+		<img src="footer.png">
+		</footer>
+	</body>
+</html>
