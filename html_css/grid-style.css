@@ -124,21 +124,29 @@ a.nav-button:visited {
 /*START HERE*/
 
 .other-news-container {
-
+	float:left;
+	width: 25%;
+	text-align: center;
 }
 
 .main-container {
-	
+	float:right;
+	width:75%;
+	text-align: center;
 }
 
 .ib-grid-item {
-	
+	width: 33%;
+	display:inline-block;
 }
 
 .ib-grid-item img {
-	
+	max-width: 66.7%;
+	max-height:66.7%;
 }
 
 .other-news-item {
-	
+	box-sizing:border-box;
+	padding:0 10%;
+	margin-bottom: 10%; /* we did not add padding for this as we are using border box and padding is inside the bordr so the the image would have shrunk */
 }
