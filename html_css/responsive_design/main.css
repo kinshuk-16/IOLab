@@ -46,4 +46,16 @@ table {
 
 /*----------------- CSS RESET ------------------*/
 
-/*Your main CSS should go here*/
+/*header{
+	width:40%;
+	margin:auto;
+}
+*/
+#site-title{
+
+	text-align: center;
+}
+#navigation{
+	text-align: center;
+}
+
