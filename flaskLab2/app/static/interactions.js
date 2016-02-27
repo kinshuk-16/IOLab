@@ -4,13 +4,13 @@ $('#submit-survey').on('click', function submitSurvey() {
 	var vacation = $("input[name=vacation]").val();
 	var feBefore = $("input[name=front-end-before]").val();
 	var feAfter = $("input[name=front-end-after]").val();
-	console.log("here")
+	
 	$.post('/submit-survey', 
 		{ food: food,
 		color: color,
 		vacation: vacation,
-		before:feBefore,
-		after:feAfter }, 
+		feBefore:feBefore,
+		feAfter:feAfter }, 
 		function (data) {
     	//console.log(data);
     	document.body.parentNode.innerHTML=data;
