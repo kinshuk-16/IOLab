@@ -1,0 +1,136 @@
+/*----------------- CSS RESET ------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------- CSS RESET ------------------*/
+/*generic properties*/
+body {
+  background: #ebebeb;
+  font: 1em/1.5 "Cambria", serif;
+}
+/* header part*/
+.header-wrapper{
+	margin-bottom: 10px;
+	padding: 0;
+	background-color: #050505;
+	height:65px;
+}
+header{
+	width:30%;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	line-height: 1.5;
+}
+#logo{
+	font:  italic 1.7em/1.25 "Cambria", serif;
+	color:#ff5f2e;
+}
+/*search*/
+#querySearch{
+	display: inline-block;
+	text-align: right;
+	vertical-align: top; 
+	padding-top: 15px;
+	width:65%;	
+}
+/*sidebar*/
+aside{
+
+	float:left;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 50px;
+	width:20%;
+	/*background-color: #050505;
+	height: 400px; why does height not work i oercentage here? */
+	border-radius: 15px;
+    padding: 10px; 
+    /*color:#fff;*/
+}
+.playlist{
+	/*display: inline-block;*/
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 5%;
+	/*margin-right: 5px;*/
+	background-color: #fff;
+	height:115px;
+	border-radius: 5px;
+}
+
+.playlist img {
+	float:left;
+	max-width: 50px;
+	max-height: 50px;
+	margin: 2px;
+}
+/* body */
+article{
+	float:left;
+	width:65%;
+	/*border-radius: 15px;
+    border: 2px solid #050505;*/
+    padding: 20px; 
+    margin-top: 20px;
+    margin-right:20px;
+}
+.song{
+	/*display: inline-block;*/
+	box-sizing: border-box;
+	width: 90%;
+	margin-bottom: 5%;
+	/*margin-right: 5px;*/
+	background-color: #fff;
+	height:110px;
+	border-radius: 15px;
+}
+
+.song img {
+	float:left;
+	max-width: 100px;
+	max-height: 100px;
+	margin: 5px;
+}
