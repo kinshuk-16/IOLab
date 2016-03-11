@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <h1>Welcome to ACME Aircraft Parts</h1>
+      <div class= "section">
+        <a href="{{ url_for('create_customer') }}">Add a Customer</a>  <br>
+        <a href="{{ url_for('get_orders') }}">Add an Order</a>
+      </div>
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <h3>These are all of our awesome customers:</h3>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th data-field="name">Name</th>
+              <th data-field="company">Company</th>
+              <th data-field="email">Email</th>
+              <th data-field="phone">Phone</th>
+              <th data-field="address">Address</th>
+              <th data-field="country">Country</th>
+              <th data-field="zip">Zip</th>
+              
+            </tr>
+          </thead>
+          {% for customer in customers %}
+            <tr>
+              <td>{{ customer.f_name }} {{ customer.l_name }}</td>
+              <td>{{ customer.company }}</td>
+              <td>{{ customer.email }}</td>
+              <td>{{ customer.phone }}</td>
+              {% for address in addresses %}
+              <td>{{ address.street }} {{ address.city}} {{ address.state}}</td>
+              <td>{{ address.country }}</td>
+              <td>{{ address.zipcode }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div class="section">
+        <h3>These are all the Orders:</h3>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th data-field="n_parts">Num of parts</th>
+              <th data-field="total">Total amount spent</th>
+
+            </tr>
+          </thead>
+          {% for order in orders %}
+            <tr>
+              <td>{{ order.num_parts_ordered }}</td>
+              <td>{{ order.total_spent }}</td> 
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}
